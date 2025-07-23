@@ -1,22 +1,28 @@
 #include <iostream>
 #include <assert.h>
 
-char size(int cms) {
+char size(int cms)
+{
     char sizeName = '\0';
-    if(cms < 38) {
+    if (cms < 38)
+    {
         sizeName = 'S';
-    } else if(cms < 42) {
+    }
+    else if (cms < 42)
+    {
         sizeName = 'M';
-    } else if(cms > 42) {
+    }
+    else if (cms > 42)
+    {
         sizeName = 'L';
     }
     return sizeName;
 }
 
-void testTshirtSize() {
+void testTshirtSize()
+{
     std::cout << "\nTshirt size test\n";
     assert(size(37) == 'S');
-	assert(size(38) == 'M');
     assert(size(38) == 'M');
     assert(size(40) == 'M');
     assert(size(43) == 'L');
